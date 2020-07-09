@@ -1,0 +1,36 @@
+PROCEDURE  dot_product (v1,v2: ARRAY_OF INTEGER, VAR x, sum: INTEGER) 
+VAR 
+    i: INTEGER;
+    
+BEGIN
+    i:= 0;
+    sum:= 0;
+    x:= 0; 
+    FOR i FROM 0 TO 2 STEP 1  DO
+     x:=v1[i]*v2[i]   
+     sum:=sum+x
+    END_FOR
+END
+
+ALGORITHM Vector
+VAR 
+  v1 : ARRAY_OF INTEGER[3] ;
+  v2 : ARRAY_OF INTEGER[3] ;
+  sum,i, j : INTEGER;
+BEGIN
+    i:=0;
+    j:=0;
+    dot_product (v1,v2: ARRAY_OF INTEGER, VAR x, sum: INTEGER)
+    IF (v1.length<>v2.length) THEN
+        BREAK;
+        ELSE IF 
+        dot_product = 0 ;
+        Write ("The two vectors of given IR are orthogonal",sum)
+        ELSE 
+        Write ("The two vectors of given IR are not orthogonal")
+
+    END_IF
+    
+
+END
+
